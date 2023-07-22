@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# User list
 
-## Getting Started
+This NEXT.js app is a response made by Evelan to assess my REACT and frontend skills. I've considered many factors on creating this web application. First is to have the display be as responsive as possible. Second, make the fetching of data through the API as fast and as dynamic as possible. Right now, the API only has a total number of 2 pages with 6 users per page. But the way I've coded the web application is that it will make multiple request until the API no longer returns a value, this will make sure that if the API adds another page, the web application would still be able to fetch the newly-added data.
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Screenshot
+![Screenshot of challenge solution](screenshot.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Links
 
-## Learn More
+- Solution URL: [Add solution URL here](https://github.com/awesooomeME/results_summary)
+- Live Site URL: [Add live site URL here](https://results-summary-ashen.vercel.app/)
 
-To learn more about Next.js, take a look at the following resources:
+## My process
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Built with
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind](https://https://tailwindcss.com//) - For styles
 
-## Deploy on Vercel
+### Useful resources
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [resource 1](https://swr.vercel.app/docs/pagination) 
+    - Great Reference for the use of useSWR
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [resource 2](https://livebook.manning.com/book/next-js-in-action/welcome/v-2/) 
+    - Great book for React introduction
+
+## Author
+
+- Github - [awesooomeME](https://github.com/awesooomeME)
+- Frontend Mentor - [@awesooomeME](https://www.frontendmentor.io/profile/awesooomeME)

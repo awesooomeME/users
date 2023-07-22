@@ -1,7 +1,6 @@
 "use client"
 
 import UserCard from "./components/UserCard";
-import { useState, useEffect } from 'react'
 import useSWRInfinite from 'swr/infinite'
 
 type user = {
@@ -15,12 +14,11 @@ type user = {
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 const getKey = (pageIndex: any, previousPageData: any) => {
-  if (previousPageData && !previousPageData.total_pages) return null // reached the end
-  return `https://reqres.in/api/users?page=${pageIndex+1}&limit=10`                    // SWR key
+  if (previousPageData && !previousPageData.total_pages) return null
+  return `https://reqres.in/api/users?page=${pageIndex+1}&limit=10`
 }
 
 export default function Home() {
-  const [numUsers, setNumUsers] = useState(12)
   const { data, size, setSize } = useSWRInfinite(getKey, fetcher)
 
   if (!data || data===undefined) return <h1>Failed to connect to API</h1>
@@ -32,7 +30,7 @@ export default function Home() {
       gap-5 py-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:px-20'>
         {/* data is an array of each api request */}
         {data.map((page) => page.data.map((user: user) => {
-          return (<UserCard user_id={user.id} email={user.email} 
+          return (<UserCard user_id={user.id} email={user.email} key={user.email}
             first={user.first_name} last={user.last_name} avatar={user.avatar}/>)
         }))}
       </div>

@@ -23,7 +23,8 @@ const UserCard = ({user_id, email, first, last, avatar}: user) => {
                         h-20 w-20 overflow-hidden">
                         <Image src={avatar} alt="avatar"
                             className="h-auto w-20 mx-auto object-center"
-                            width={100} height={100}/>
+                            width={100} height={100} 
+                            loading="eager" priority={true}/>
                     </div>
                 </div>
                 <div className="flex flex-col pt-2 gap-1">
