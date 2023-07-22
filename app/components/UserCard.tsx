@@ -1,7 +1,15 @@
 import Image from "next/image";
 import {BsHeart, BsEnvelope, BsInfoSquare} from "react-icons/bs";
 
-const UserCard = () => {
+type user = {
+    user_id: number,
+    email: string,
+    first: string,
+    last: string,
+    avatar: string,
+}
+
+const UserCard = ({user_id, email, first, last, avatar}: user) => {
     return (
         <div className="bg-white/10 p-5 rounded-xl
             shadow-xl flex flex-col gap-4 relative overflow-hidden
@@ -13,19 +21,20 @@ const UserCard = () => {
                 <div className="flex items-center">
                     <div className="rounded-full container mx-auto
                         h-20 w-20 overflow-hidden">
-                        {/* <Image src={avatar} alt="avatar"
-                            className="h-auto w-20 mx-auto object-center"/> */}
+                        <Image src={avatar} alt="avatar"
+                            className="h-auto w-20 mx-auto object-center"
+                            width={100} height={100}/>
                     </div>
                 </div>
                 <div className="flex flex-col pt-2 gap-1">
                     <h1 className="text-[18px] font-[400] text-white">
-                        Last_Name, 
+                        {last}, 
                         <span className="text-black/20 text-[14px] ml-1 font-normal">
-                            First_Name
+                            {first}
                         </span>
                     </h1>
                     <h1 className="text-[12px] text-dark_blue/70">
-                        #30678
+                        #{user_id}
                     </h1>
                 </div>
             </div>
@@ -33,7 +42,7 @@ const UserCard = () => {
             <div className="flex gap-3 items-center px-5">
                 <BsEnvelope/>
                 <h1 className="cursor-pointer text-[12px]">
-                    last_name@gmail.com
+                    {email}
                 </h1>
             </div>
         </div>
