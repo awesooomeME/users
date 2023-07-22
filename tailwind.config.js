@@ -8,6 +8,11 @@ module.exports = {
   theme: {
     extend: {
     },
+    colors: {
+      white: 'hsl(0, 0%, 100%)',
+      dark_blue: 'hsl(210, 68%, 36%)',
+      light_blue: 'hsl(204, 88%, 71%)'
+    },
   },
   plugins: [],
 }
