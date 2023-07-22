@@ -19,8 +19,8 @@ This NEXT.js app is a response made by Evelan to assess my REACT and frontend sk
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/awesooomeME/results_summary)
-- Live Site URL: [Add live site URL here](https://results-summary-ashen.vercel.app/)
+- Solution URL: [Solution URL here](https://github.com/awesooomeME/users)
+- Live Site URL: [Live site URL here](https://users-red.vercel.app/)
 
 ## My process
 
