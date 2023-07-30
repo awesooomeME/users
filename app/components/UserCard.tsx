@@ -19,11 +19,11 @@ const UserCard = ({user_id, email, first, last, avatar}: user) => {
             </div>
             <div className="flex justify-around gap-2 lg:gap-0 items-center bg-none">
                 <div className="flex items-center">
-                    <div className="rounded-full container mx-auto
+                    <div className="rounded-full container m-auto
                         h-20 w-20 overflow-hidden">
                         <Image src={avatar} alt="avatar"
-                            className="h-auto w-20 mx-auto object-center"
-                            width={100} height={100} 
+                            className="h-full w-full object-center object-cover"
+                            quality={100} width={100} height={100}
                             loading="eager" priority={true}/>
                     </div>
                 </div>

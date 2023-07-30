@@ -15,7 +15,7 @@ This NEXT.js app is a response made by Evelan to assess my REACT and frontend sk
 ## Overview
 
 ### Screenshot
-![Screenshot of challenge solution](screenshot.png)
+![Screenshot](screenshot.png)
 
 ### Links
 
