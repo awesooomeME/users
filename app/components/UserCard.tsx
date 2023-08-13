@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import {BsHeart, BsEnvelope, BsInfoSquare} from "react-icons/bs";
+import { BsEnvelope } from "react-icons/bs";
 import { useState, useEffect } from 'react'
 
 type user = {
@@ -11,8 +11,6 @@ type user = {
     last_name: string,
     avatar: string,
 }
-
-
 
 const UserCard = ({id, email, first_name, last_name, avatar}: user) => { 
     const [randomText, setRandomText] = useState('')
@@ -37,9 +35,6 @@ const UserCard = ({id, email, first_name, last_name, avatar}: user) => {
         <div className="bg-white/10 rounded-xl
             shadow-xl flex flex-col gap-4 relative overflow-hidden
             max-w-[380px]">
-            {/* <div className="absolute w-full h-[40%] top-0 left-0
-                bg-gradient-to-br from-dark_blue to-light_blue -z-10">
-            </div> */}
             <div className="flex gap-5 items-center 
                 bg-gradient-to-br from-dark_blue to-light_blue p-3">
                 <div className="flex items-center">

@@ -13,10 +13,7 @@ type user = {
 }
 
 const Users = ({pages}: any) => {
-  console.log(pages)
   const [numPages, setNumPages] = useState(1)
-  // console.log(users)
-  // if (!users.data || users.data===undefined) return <h1>Loading...</h1>
   
   return (
     <div className='flex flex-col justify-center items-center 
@@ -27,22 +24,19 @@ const Users = ({pages}: any) => {
           pages.map((page: any, index: number) => {
             if (index + 1 > numPages) return null
             return ( 
-            page.data.map((user: any) => (
-              <UserCard key={user.id} {...user} suppressHydrationWarning/>
+            page.data.map((user: user) => (
+              <UserCard key={user.id} {...user}/>
             ))
             )
           })
         }
       </div>
-      {/* <button className={`${size+1 === data[0].total_pages ? '' : 'opacity-50'} */}
       <button className={`
         ${numPages === pages.length ? 'opacity-50' : ''}
         bg-gradient-to-tl from-dark_blue to-light_blue
         px-5 py-3 rounded-2xl text-white shadow-lg mb-5`}
         onClick={() => setNumPages(numPages + 1)}
         disabled={numPages === pages.length ? true : false}>
-        {/* disabled={size+1 === data[0].total_pages ? false : true}
-        onClick={() => setSize(size + 1)}> */}
         Load More
       </button>
     </div>
