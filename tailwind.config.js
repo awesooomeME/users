@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        auto: 'repeat(auto-fit, minmax(300px, 1fr))'
+      }
     },
     colors: {
       white: 'hsl(0, 0%, 100%)',
